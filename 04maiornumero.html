@@ -6,19 +6,23 @@ Peça para o usuário informar três números e diga qual dos três é o maior n
     const numero2 = Number(prompt("Informe o segundo número:").trim().replace(",", "."))
     const numero3 = Number(prompt("Informe o terceiro número:").trim().replace(",", "."))
 
+    if (isNaN(numero1) || isNaN(numero2)) {
+        alert("Não é um numero.")
+    }
+    else {
     if (numero3 > numero1 && numero3 > numero2){
-        alert("Número 3 é maior")
+        alert("Número " + numero3 + " é maior")
     }
     else if (numero2 > numero1 && numero2 > numero3){
-        alert("Número 2 é maior")
+        alert("Número " + numero2 + " é maior")
     }
 
-    else if (numero1 == numero2 && numero1 == numero3){
-        alert("São iguais.")
+    else if (numero1 > numero2 && numero1 > numero3){
+        alert("Número " + numero1 + " é maior")
     }
 
     else {
-        alert("Número 1 é maior")
+        alert("são iguais")
     }
-
+}
 </script>
