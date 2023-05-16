@@ -7,18 +7,22 @@ Peça para o usuário informar três números e identifique qual o menor número
     const numero2 = Number(prompt("Informe o segundo número:").trim().replace(",", "."))
     const numero3 = Number(prompt("Informe o terceiro número:").trim().replace(",", "."))
 
-    if (numero3 < numero2 && numero3 < numero1) {
-        alert(numero3 + " é menor")
-    }
-    else if (numero2 < numero3 && numero2 < numero1) {
-        alert(numero2 + " é menor.")
-    }
-    else if (numero1 < numero3 && numero1 < numero2) {
-        alert(numero1 + " é menor")
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+        alert("Invalido, digite apenas números.")
     }
     else {
-        alert("São iguais.")
+        if (numero3 < numero2 && numero3 < numero1) {
+            alert(numero3 + " é menor")
+        }
+        else if (numero2 < numero3 && numero2 < numero1) {
+            alert(numero2 + " é menor.")
+        }
+        else if (numero1 < numero3 && numero1 < numero2) {
+            alert(numero1 + " é menor")
+        }
+        else {
+            alert("São iguais.")
+        }
     }
-
 
 </script>
