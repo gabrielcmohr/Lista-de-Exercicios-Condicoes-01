@@ -12,17 +12,21 @@ Peça para o aluno informar as notas que obteve nos três trimestres. Calcule a 
 
     const resultado = (nota1 + nota2 + nota3) / 3
 
-    if (resultado == 6){
-        alert("Exame")
+    if (isNaN(resultado)) {
+        alert("Não é uma nota. Informe apenas com números.")
     }
-    
-    else if (resultado >= 6){
-        alert("Aprovado")
-}
     else {
-        alert("Reprovado")
-    }
+        if (resultado == 6) {
+            alert("Exame")
+        }
 
+        else if (resultado >= 6) {
+            alert("Aprovado")
+        }
+        else {
+            alert("Reprovado")
+        }
+    }
 
 
 </script>
