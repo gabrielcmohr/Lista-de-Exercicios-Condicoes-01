@@ -2,12 +2,12 @@
 <script>
     /*4: Maior Número [2]
 Peça para o usuário informar três números e diga qual dos três é o maior número*/
-    const numero1 = Number(prompt("Informe o primeiro número:").trim().replace(",", "."))
-    const numero2 = Number(prompt("Informe o segundo número:").trim().replace(",", "."))
-    const numero3 = Number(prompt("Informe o terceiro número:").trim().replace(",", "."))
+    const numero1 = prompt("Informe o primeiro número:").trim().replace(",", ".")
+    const numero2 = prompt("Informe o segundo número:").trim().replace(",", ".")
+    const numero3 = prompt("Informe o terceiro número:").trim().replace(",", ".")
 
-    if (isNaN(numero1) || isNaN(numero2)) {
-        alert("Não é um numero.")
+    if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+        alert("Um ou mais valores informados não são números.")
     }
     else {
         if (numero3 > numero1 && numero3 > numero2) {
@@ -21,6 +21,10 @@ Peça para o usuário informar três números e diga qual dos três é o maior n
             alert("Número " + numero1 + " é maior")
         }
 
+        else if (numero1 == numero2 || numero1 == numero3 || numero2 == numero3){
+            alert("Dois números são iguais, informe numeros diferentes.")
+        }
+        
         else {
             alert("são iguais")
         }

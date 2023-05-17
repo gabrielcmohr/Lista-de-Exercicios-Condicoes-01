@@ -6,11 +6,29 @@ Peça para o usuário informar a sua idade e diga se ele está apto a votar ou n
     let idadeEleitor = Number(prompt("Informe sua idade:").trim());
 
     if (idadeEleitor >= 18) {
-        alert("É obrigado a votar.");
+        const titulo = prompt("Possui título? S ou N").toUpperCase().trim();
+        if (titulo == "S") {
+            alert("Apto a votar!");
+        }
+        else if (titulo == "N") {
+            alert("Faça seu titúlo de eleitoral.");
+        }
+        else {
+            alert("Invalido, responda apenas com S ou N");
+        }
     }
 
     else if (idadeEleitor >= 16) {
-        alert("Não é obrigado a votar.");
+        const titulo = prompt("Possui título? S ou N").toUpperCase().trim();
+        if (titulo == "S") {
+            alert("Apto a votar!");
+        }
+        else if (titulo == "N") {
+            alert("Faça seu titúlo de eleitoral.");
+        }
+        else {
+            alert("Invalido, responda apenas com S ou N");
+        }
     }
     else {
         alert("Não precisa votar.");
