@@ -8,11 +8,14 @@ Peça para o usuário informar uma letra e diga se esta letra é uma vogal ou um
         if (vogal === "a" || vogal === "e" || vogal === "i" || vogal === "o" || vogal === "u") {
            alert("É uma vogal.");
         }
+        else if (Number(vogal)){
+            alert( vogal + " é um número. Informe apenas letras :)")
+        }
         else {
-            alert("É uma consoante.");
+            alert(vogal + " é uma consoante ou caractere especial.");
         }
     }
     else {
-        alert("Informe apenas uma letra!");
+        alert("Informe apenas um caractere!");
     }
 </script>
